@@ -1,0 +1,16 @@
+extends layout
+
+block content
+	h1= title
+	table(class='table')
+		- var iplist = ['54.192.233.45']
+
+		- for(var i=0; i<iplist.length; i++) {
+		tr
+			td #{i}
+			td #{iplist[i]}
+			td
+				img(src='/imgproxy/http%3A%2F%2Fdiz36nn4q02zr.cloudfront.net%2F%2Fwebapi%2FimagesV3%2FCropped%2FSalePage%2F1976361%2F0%2F000000%3Fv%3D1/#{iplist[i]}'
+					width='50%'
+					height='50%')
+		- }

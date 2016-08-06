@@ -1,0 +1,20 @@
+{
+  "name": "testHeader",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node-debug ./bin/www"
+  },
+  "dependencies": {
+    "body-parser": "~1.13.2",
+    "cookie-parser": "~1.3.5",
+    "debug": "~2.2.0",
+    "dont-sniff-mimetype": "^1.0.0",
+    "express": "~4.13.1",
+    "helmet": "^2.1.2",
+    "http-parser-js": "^0.4.3",
+    "jade": "~1.11.0",
+    "morgan": "~1.6.1",
+    "serve-favicon": "~2.3.0"
+  }
+}
