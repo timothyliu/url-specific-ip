@@ -5,9 +5,13 @@ URL-SPECIFIC-IP
 指定 ip 和 url 代理執行 http get
 
 # 運作模式／代理方式
-## 例如 ``http://localhost:3000/proxy/http%3A%2F%2Fwww.anns.tw%2Fwebapi%2FShop%2FGetShopCategoryList%3Fid%3D123%26v%3D0/tyo-mweb1.nineyi.corp``
+## 案例
+* 以 browser 瀏覽：
 
-## 先以指定 ip/domain (mweb1.nineyi.corp) 建立連線後，再發出下列 http get: 
+  ``http://localhost:3000/proxy/http%3A%2F%2Fwww.anns.tw%2Fwebapi%2FShop%2FGetShopCategoryList%3Fid%3D123%26v%3D0/tyo-mweb1.nineyi.corp``
+
+* 先以指定 ip/domain (mweb1.nineyi.corp) 建立連線後，再發出下列 http get: 
+
 ```http
 GET /webapi/Shop/GetShopCategoryList?id=123&v=0?id=123&v=0 HTTP/1.1
 host: www.anns.tw
@@ -18,8 +22,15 @@ accept-encoding: gzip, deflate, sdch
 accept-language: zh-TW,zh;q=0.8,en-US;q=0.6,en;q=0.4,zh-CN;q=0.2
 if-modified-since: Sun, 07 Aug 2016 01
 ```
-## 會將原先的 headers 也都會代理發送，增加一個 header: `real-server-ip` 即原來指定的 ip/domain
-## 會將 server response headers 也會一併送回
+
+* HTTP headers
+
+  * 會將原先的 headers 也都會代理發送
+
+  * 會將 server response headers 也會一併送回
+
+  * 回應時增加一個 header: `real-server-ip` 即原來指定的 ip/domain
+
 ```http
 Access-Control-Allow-Credentials:true
 Access-Control-Allow-Origin:http
