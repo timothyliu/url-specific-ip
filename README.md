@@ -8,7 +8,7 @@ URL-SPECIFIC-IP
 ## 案例
 * 以 browser 瀏覽：
 
-  ``http://localhost:3000/proxy/http%3A%2F%2Fwww.anns.tw%2Fwebapi%2FShop%2FGetShopCategoryList%3Fid%3D123%26v%3D0/tyo-mweb1.nineyi.corp``
+  http://localhost:3000/proxy/http%3A%2F%2Fwww.anns.tw%2Fwebapi%2FShop%2FGetShopCategoryList%3Fid%3D123%26v%3D0/tyo-mweb1.nineyi.corp
 
 * 先以指定 ip/domain (mweb1.nineyi.corp) 建立連線後，再發出下列 http get: 
 
@@ -51,3 +51,24 @@ X-Frame-Options:SAMEORIGIN
 X-Powered-By:Express
 X-Xss-Protection:1; mode=block
 ```
+
+# Setup/Run
+
+* get code and get library
+```sh
+git clone https://github.com/timothyliu/url-specific-ip.git
+
+cd url-speciic-ip
+
+npm install
+```
+
+* run server
+
+```sh
+npm start
+```
+
+* 瀏覽網頁
+
+http://localhost:3000
