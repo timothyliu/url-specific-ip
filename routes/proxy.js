@@ -13,7 +13,7 @@ router.get('/:url/:ip', function(req, res, next) {
     options.port = urlobj.port;
     options.headers = req.headers;
 
-    imgproxy(options, function(result) {
+    proxy(options, function(result) {
         result.headers['real-server-ip'] = ipt.ip;
         res.writeHead(result.headers.statusCode, result.headers);
         res.end(result.data);
@@ -22,7 +22,7 @@ router.get('/:url/:ip', function(req, res, next) {
 
 module.exports = router;
 
-var imgproxy = function(options, callback) {
+var proxy = function(options, callback) {
     var client, net, raw_request;
 
     net = require('net');
