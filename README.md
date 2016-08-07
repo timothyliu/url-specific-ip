@@ -71,4 +71,4 @@ npm start
 
 * 瀏覽網頁
 
-[browse] http://localhost:3000 (http://localhost:3000)
+  * [link to http://localhost:3000](http://localhost:3000)
